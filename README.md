@@ -1,24 +1,45 @@
-# README
+#Specification
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##General Requirement:
 
-Things you may want to cover:
+* A user can belong to an organization. (Think of the organization feature of GitHub)
 
-* Ruby version
+* A user and organization have points. (A user must use points to create a post)
 
-* System dependencies
+* A user can use points from either the user account or organization account by account switching between them. (A user can belong to multiple organizations)
 
-* Configuration
+##Model:
 
-* Database creation
+###User
+The user will have first name, last name, available point. Please pre-create the existing user and add initial points in database since we are skipping the user creation process on flow.
 
-* Database initialization
+###Post
+The post will have content.
 
-* How to run the test suite
+###Organization
+The organization will have name and available point. Please pre-create the existing organization and add initial points in database since we are skipping the user creation process on flow.
 
-* Services (job queues, cache servers, search engines, etc.)
+###Organization Membership
+The organization membership will have user_id and organization_id. Please pre-create the organization membership in database.
 
-* Deployment instructions
+##View:
 
-* ...
+###Common Top View
+* There is an account switching dropdown menu.
+* Display available points of the selected account.
+
+###List View
+
+* List all posts.
+* Display empty state if no posts exist.
+
+###New Post View
+* The form should have a textarea field for content.
+
+##Controller:
+
+###PostsController
+* This controller will have index and new actions for listing and new post form respectively.
+
+###AccountSwitchController
+* This controller will handle the account switching between the user account and organization account.
