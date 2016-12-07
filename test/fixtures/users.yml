@@ -1,8 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  available_point: 1
-  password_digest: MyString
+alexandre:
+  first_name: Alexandre
+  last_name: Andrade
+  email: aleandrade@gmail.com
+  password_digest: <%= User.digest('chattingcat') %>

@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# To use pagination
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Used to hash digest the users passwords
 gem 'bcrypt'
 # To support BootStrap Sass on the asset pipeline
@@ -39,6 +42,8 @@ group :development, :test do
 end
 
 group :development do
+  # Generate fake content for the Posts
+  gem 'faker'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'

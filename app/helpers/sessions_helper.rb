@@ -15,4 +15,9 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
+
+  def destroy
+    log_out
+    redirect_to root_url
+  end
 end
