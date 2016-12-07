@@ -21,4 +21,5 @@
 .byebug_history
 
 # Ignore the IDE config
-#.idea/*
+.idea/workspace.xml
+.idea/tasks.xml
