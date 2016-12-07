@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Used to hash digest the users passwords
+gem 'bcrypt'
+# To support BootStrap Sass on the asset pipeline
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'

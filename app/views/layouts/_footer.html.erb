@@ -4,10 +4,10 @@
   </small>
   <nav>
     <ul>
-      <% if true %>
-          <li><%= link_to "New Post",   "#" %></li>
+      <% if logged_in? %>
+          <li><%= link_to "New Post", posts_new_path %></li>
       <% else %>
-          <li><%= link_to "Log in", "#" %></li>
+          <li><%= link_to "Log in", login_path %></li>
       <% end %>
       <li><a href="https://chattingcat.com/student/index">Chatting Cat</a></li>
     </ul>

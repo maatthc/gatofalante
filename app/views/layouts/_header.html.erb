@@ -3,9 +3,9 @@
     <%= link_to "Gato Falante", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", "#" %></li>
-        <% if true %>
-            <li><%= link_to "Posts", '#' %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <% if logged_in? %>
+            <li><%= link_to "Posts", posts_index_path %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b class="caret"></b>
@@ -14,12 +14,12 @@
                 <li><%= link_to "Organization 1", "#S" %></li>
                 <li class="divider"></li>
                 <li>
-                  <%= link_to "Log out", "#", method: "delete" %>
+                  <%= link_to "Log out", logout_path, method: "delete" %>
                 </li>
               </ul>
             </li>
         <% else %>
-            <li><%= link_to "Log in", "#" %></li>
+            <li><%= link_to "Log in", login_path %></li>
         <% end %>
       </ul>
     </nav>
