@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
+  has_many :organization_memberships, dependent:   :destroy
+  has_many :organizations, through: :organization_memberships
 
   # To guarantee the format is always the same
   before_save {email.downcase!}

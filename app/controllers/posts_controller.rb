@@ -23,8 +23,7 @@ class PostsController < ApplicationController
       redirect_to posts_new_path
     else
       if @post.save
-        points = @current_user.available_point - PostsController::POINTS_PER_POST
-        @current_user.update_column(:available_point, points)
+        decrease_points
         flash[:success ] = "New Post created!"
         redirect_to posts_index_path
       else
@@ -49,7 +48,7 @@ class PostsController < ApplicationController
   end
 
   def enough_points?
-    current_user.available_point < POINTS_PER_POST ? false: true
+    get_available_points < POINTS_PER_POST ? false: true
   end
 
 end

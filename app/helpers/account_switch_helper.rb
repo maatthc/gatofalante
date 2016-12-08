@@ -1,0 +1,2 @@
+module AccountSwitchHelper
+end

@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Create test users
+# Create known test users so we can login using this details
 User.create!(first_name:  "Alexandre",
              last_name:  "Andrade",
              email: "aleandrade@gmail.com",
@@ -24,7 +24,16 @@ User.create!(first_name:  "April",
 
 
 users = User.order(:created_at).take(5)
+# Generates 20 random posts for each users (max 5)
 20.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.posts.create!(content: content) }
+end
+
+# Generates 5 random Organizations and link it to each users
+5.times do
+  name = Faker::Name.name
+  points = rand(5..30)
+  organization = Organization.create!(name: name, available_point: points)
+  users.each {|user| user.organization_memberships.create!(organization:organization)}
 end
