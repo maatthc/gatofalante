@@ -9,7 +9,7 @@
 # Create known test users so we can login using this details
 User.create!(first_name:  "Alexandre",
              last_name:  "MaaT",
-             email: "maat@mail.com",
+             email: "maat@linuxmail.org",
              available_point: 55,
              password:              "chattingcat",
              password_confirmation: "chattingcat")
