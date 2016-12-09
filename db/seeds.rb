@@ -8,15 +8,15 @@
 
 # Create known test users so we can login using this details
 User.create!(first_name:  "Alexandre",
-             last_name:  "Andrade",
-             email: "aleandrade@gmail.com",
+             last_name:  "MaaT",
+             email: "maat@mail.com",
              available_point: 55,
              password:              "chattingcat",
              password_confirmation: "chattingcat")
 
-User.create!(first_name:  "April",
-             last_name:  "Kim",
-             email: "april@chattingcat.com",
+User.create!(first_name:  "Psy",
+             last_name:  "Gangnam",
+             email: "psy@super.com",
              available_point: 71,
              password:              "chattingcat",
              password_confirmation: "chattingcat")
