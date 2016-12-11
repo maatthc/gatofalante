@@ -1,9 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <% if logged_in? %>
-    <span id="logo">You have <%= get_available_points %> <%= "Point".pluralize(get_available_points) %>. <%= get_current_organization_name %></span>
+    <span class="navbar-brand">You have <%= get_available_points %> <%= "Point".pluralize(get_available_points) %>. <%= get_current_organization_name %></span>
         <% else %>
-    <%= link_to "Gato Falante", root_path, id: "logo" %>
+    <%= link_to "Gato Falante", root_path, class:"navbar-brand" %>
         <% end %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
