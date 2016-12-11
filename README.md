@@ -5,7 +5,8 @@
 * rails db:migrate
 * rails db:seed
 * rails s
-* Visit [http://localhost:3000]
+* Visit http://localhost:3000
+
 #Specification
 
 ##General Requirement:
