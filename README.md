@@ -1,3 +1,11 @@
+# How to use
+* git clone https://github.com/maatthc/gatofalante.git
+* bundle install --without production
+* bundle update
+* rails db:migrate
+* rails db:seed
+* rails s
+* Visit [http://localhost:3000]
 #Specification
 
 ##General Requirement:
