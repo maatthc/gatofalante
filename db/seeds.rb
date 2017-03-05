@@ -10,14 +10,14 @@
 User.create!(first_name:  "Alexandre",
              last_name:  "MaaT",
              email: "maat@linuxmail.org",
-             available_point: 55,
+             available_point: 99999999,
              password:              "chattingcat",
              password_confirmation: "chattingcat")
 
 User.create!(first_name:  "Psy",
              last_name:  "Gangnam",
              email: "psy@super.com",
-             available_point: 71,
+             available_point: 99999999,
              password:              "chattingcat",
              password_confirmation: "chattingcat")
 
