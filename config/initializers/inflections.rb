@@ -14,3 +14,7 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  # allows StatsDMonitor to be loaded from middleware/statsd_monitor.rb
+  inflect.acronym "StatsD"
+end
